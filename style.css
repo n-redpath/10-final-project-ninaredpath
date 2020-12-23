@@ -1,0 +1,76 @@
+
+
+/* Header style */
+.header{
+    height: 130px;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    position: relative;
+    align-content: center;
+    text-align: center;
+}
+
+.header a{
+margin-top: 50px;
+padding-top: 40px;
+    margin-right: 8%;
+}
+
+.header a img{
+    float: left;
+    padding-left: 60px;
+    padding-top: 10px;
+    height: 130px;
+    /* margin-top: 10px; */
+}
+
+
+/* ABOUT THE FARM STYLE */
+#farm-pics{
+    height: 500px;
+    background-color: coral;
+    width: 100%;
+}
+
+.about-us{
+    padding-top: 25px;
+    align-content: center;
+    text-align: center;
+    padding-right: 120px;
+    padding-left: 120px;
+}
+
+
+/* ABOUT THE OWNERS STYLE */
+#pic-1{
+    background-color: cyan;
+}
+
+#pic-2{
+    background-color: darkgoldenrod;
+}
+
+#pic-3{
+    background-color: darkgreen;
+}
+
+
+/* ORGANIC/BIODYNAMIC STYLE */
+#what-is{
+    padding-top: 25px;
+    align-content: center;
+    text-align: center;
+}
+
+
+.odd{
+    background-color: plum;
+    height: 250px;
+}
+
+.even{
+    background-color: rgb(94, 119, 122);
+    height: 250px;
+}

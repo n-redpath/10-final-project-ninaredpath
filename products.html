@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="header">
+        <!-- logo = home-->
+        <a href=""><img src="cow2.png" alt="logo"></a>
+
+        <br><br><br>
+
+        <!-- About us = further down on Home-->
+        <a href="index.html">About Us</a>
+
+        <!-- Programs and Events -->
+        <a href="programs.html">Programs and Events</a>
+
+
+        <!-- Products -->
+        <a href="products.html">Products</a>
+    </div>
+    <br>
+    <br><br>
+
+    <!-- images gallery of products -->
+    <div class="container">
+        <!-- maple syrup, beef, honey -->
+        <div class="row">
+            <div class="col odd"></div>
+            <div class="col even"></div>
+            <div class="col odd"></div>
+        </div> 
+
+        <!-- apples, pears, peaches -->
+        <div class="row">
+            <div class="col even"></div>
+            <div class="col odd"></div>
+            <div class="col even"></div>
+        </div>
+    </div>
+
+    <div class="about-us">
+        <h5>Our Products</h5>
+
+        <p>We aim for the purest quality in our products, our attitude, 
+            and your experience. All of our natural, ethical and organic 
+            products meet the highest standards of excellence and sustainability. </p>
+
+      <p>Our syrup has found its way to 20 U.S. states, as well as the capital. It has also been 
+          sent as far as Japan, Hong Kong, Belgium, the Netherlands, Switzerland, the United Kingdom, 
+          Saudi Arabia, and Republic of Georgia.
+        </p>
+
+        <p>Where will you send yours?</p>
+        <br>
+    </div>
+
+       <!-- API GAME BANNER -->
+    <div class="container">
+        <div class="row">
+            <div class="col" id="pic-2">
+                <br><br><br>
+            </div>
+        </div>
+        <br>
+    </div>
+<!-- the following text is my own words -->
+    <div class="about-us">
+        <h5>Find a recipe!</h5>
+        <p>Can't decide what to make with one of our products? Use our recipe finder below!</p>
+        <br>
+        <p>Pick a product:</p>
+        <!-- the following is from bootstrap -->
+        <div class="btn-group">
+            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="drop">
+              Products
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" id = "syrup">Maple Syrup</a>
+                <a class="dropdown-item" id = "beef">Grass Fed Beef</a>
+                <a class="dropdown-item" id = "honey">Raw Honey</a>
+                <a class="dropdown-item" id="apples">Apples</a>
+                <a class="dropdown-item" id="pears">Pears</a>
+                <a class="dropdown-item" id="peaches">Peaches</a>
+            </div>
+          </div>
+          <br><br>
+          <h4 id = "product-update">Product Chosen: </h4>
+          <br>
+    </div>
+
+
+    <div>
+        <hr>
+        <br><br><br><br><br><br><br><br>
+        <br><br><br>
+        <hr>
+        <br>
+    </div>
+
+
+
+
+ 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>   
+document.getElementById("syrup").addEventListener("click", function () {changeProduct("syrup")}, false) 
+document.getElementById("beef").addEventListener("click", function () {changeProduct("beef")}, false) 
+document.getElementById("honey").addEventListener("click", function () {changeProduct("honey")}, false) 
+document.getElementById("apples").addEventListener("click", function () {changeProduct("apples")}, false) 
+document.getElementById("pears").addEventListener("click", function () {changeProduct("pears")}, false) 
+document.getElementById("peaches").addEventListener("click", function () {changeProduct("peaches")}, false) 
+
+
+
+
+function changeProduct(product){
+    document.getElementById("product-update").innerHTML = "Product Chosen: " + product
+}
+
+</script>
+
+</body>
+</html>
