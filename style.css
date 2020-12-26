@@ -1,3 +1,9 @@
+.container{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
 
 
 /* Header style */
@@ -28,10 +34,20 @@ padding-top: 40px;
 
 
 /* ABOUT THE FARM STYLE */
-#farm-pics{
-    height: 500px;
-    background-color: coral;
+#mainpic{
+    align-items: center;
+    align-content: center;
     width: 100%;
+
+}
+#farm-pics{
+    margin-top: 5px;
+    height: 550px;
+    background-color: coral;
+    object-fit: cover;
+    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
 }
 
 .about-us{
@@ -44,20 +60,12 @@ padding-top: 40px;
 
 
 /* ABOUT THE OWNERS STYLE */
+
 #pic-1{
     margin: 0px;
     padding: 0px;
     background-color: cyan;
 }
-
-#pic-2{
-    background-color: darkgoldenrod;
-}
-
-#pic-3{
-    background-color: darkgreen;
-}
-
 
 /* ORGANIC/BIODYNAMIC STYLE */
 #what-is{
@@ -88,6 +96,13 @@ padding-top: 40px;
     object-position: 0% 17%;
 }
 
+#worker-2{
+    width: 105%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 0% 40%;
+}
+
 
 /* PRODUCT IMAGES */
 .product-image{
@@ -115,3 +130,21 @@ padding-top: 40px;
     height: 250px;
 }
 
+
+/* RANGER DESCRIPTION STYLE  */
+#sky{
+    object-fit: cover;
+    object-position: 0% 45%;
+    height: 250px;
+    width: 100%;
+}
+
+/* FILM LOCATION STYLE */
+.filmpics{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+}

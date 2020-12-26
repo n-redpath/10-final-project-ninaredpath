@@ -11,7 +11,7 @@
 <body>
     <div class="header">
         <!-- logo = home-->
-        <a href=""><img src="cow2.png" alt="logo"></a>
+        <a href=""><img src="photos/cow2.png" alt="logo"></a>
 
         <br><br><br>
 
@@ -29,27 +29,27 @@
     <br>
 
     <!-- images gallery of products -->
-    <div class="container">
+    <div>
         <!-- maple syrup, beef, honey -->
         <div class="row">
             <div class="col odd">
-                <img class="product-image" src="syrup.jpg" alt="syrup">
+                <img class="product-image" src="photos/syrup.jpg" alt="syrup">
             </div>
             <div class="col even">
-                <img class="product-image" src="beef.jpg" alt="syrup">
+                <img class="product-image" src="photos/pear.jpg" alt="syrup">
             </div>
             <div class="col odd">
-                <img class ="product-image" src="honey.png" alt="">
+                <img class ="product-image" src="photos/honey.png" alt="">
             </div>
         </div> 
 
         <!-- apples, pears, peaches -->
         <div class="row">
             <div class="col even">
-                <img class= "product-image" src="apples.png" alt="apples">
+                <img class= "product-image" src="photos/apples.png" alt="apples">
             </div>
-            <div class="col odd"> <img class="product-image" src="pear.jpg" alt=""></div>
-            <div class="col even"><img class = "product-image" src="peaches.jpg" alt="peaches"></div>
+            <div class="col odd"> <img class="product-image" src="photos/beef.jpg" alt=""></div>
+            <div class="col even"><img class = "product-image" src="photos/peaches.jpg" alt="peaches"></div>
         </div>
     </div>
 
@@ -157,7 +157,7 @@ function getRecipe(){
         request.send();
 
 }
-curl "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
+// curl "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
 
 
         // xhttp.onreadystatechange = function () {
