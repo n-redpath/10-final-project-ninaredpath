@@ -11,9 +11,9 @@
 <body>
     <div class="header">
         <!-- logo = home-->
-        <a href=""><img src="photos/cow2.png" alt="logo"></a>
+        <a href="index.html"><img src="photos/cow2.png" alt="logo"></a>
 
-        <br><br><br>
+        <br><br>
 
         <!-- About us = further down on Home-->
         <a href="index.html">About Us</a>
@@ -23,11 +23,11 @@
 
 
         <!-- Products -->
-        <a href="products.html">Products</a>
+        <a href="products.html">Shop</a>
     </div>
     <br>
     <br>
-
+    <br><br><br><br>
     <!-- images gallery of products -->
     <div>
         <!-- maple syrup, beef, honey -->
@@ -54,7 +54,7 @@
     </div>
 
     <div class="about-us">
-        <h5>Our Products</h5>
+        <h4>Our Products</h4>
 
         <p>We aim for the purest quality in our products, our attitude, 
             and your experience. All of our natural, ethical and organic 
@@ -80,7 +80,7 @@
     </div>
 <!-- the following text is my own words -->
     <div class="about-us">
-        <h5>Find a recipe!</h5>
+        <h4>Find a recipe!</h4>
         <p>Can't decide what to make with one of our products? Use our recipe finder below!</p>
         <br>
         <p>Pick a product:</p>
@@ -104,10 +104,18 @@
     </div>
 
 
-    <div>
+    <div id="recipe">
         <hr>
-        <br><br><br><br><br><br><br><br>
-        <br><br><br>
+        <h5 id="title"></h5>
+        <img src="" alt="picture" id="recipePic">
+        <ul id="ingredients">
+
+        </ul>
+
+        <a href="" id="link">Learn More</a>
+
+
+        <br><br><br><br><br><br>
         <hr>
         <br>
     </div>
@@ -133,46 +141,53 @@ document.getElementById("peaches").addEventListener("click", function () {change
 
 function changeProduct(product){
     document.getElementById("product-update").innerHTML = "Product Chosen: " + product
+    getRecipe(product)
 }
 
-function getRecipe(){
+function getRecipe(product){
+    console.log("getting here")
     var recipes = []
     var request = new XMLHttpRequest();
     // change to on ready state ? 
-    request.onload = function () {
-        if (this.status == 200){
+
+    request.onreadystatechange = function () {
+        console.log(this.readyState)
+        if (this.readyState == 4 & this.status == 200){
             recipes = JSON.parse(this.responseText);
+            console.log(recipes)
+            console.log("number of results: "+ recipes.hits.length)
+            // get a random number
+            var randomNum = parseInt(Math.random()*recipes.hits.length)
+            console.log(randomNum)
+            document.getElementById("title").innerHTML = recipes.hits[randomNum].recipe.label
+
+            document.getElementById("recipePic").src = recipes.hits[randomNum].recipe.image
+            document.getElementById("recipePic").style.display = "block"
+
+
+            for (var i=0; i<recipes.hits[randomNum].recipe.ingredientLines.length; i++){
+                var ing = document.createElement("li")
+                ing.innerHTML = recipes.hits[randomNum].recipe.ingredientLines[i]
+                document.getElementById("ingredients").appendChild(ing)
+                document.getElementById("link").href = recipes.hits[randomNum].recipe.shareAs
+                document.getElementById("link").style.display = "inline"
+            }
+            
         }
         else {
             console.log("not found");
         }
         
     }
-    // state = live, plan = developer
-    var applicationID = "abb6734b";
-    var applicationKey = "4ba3e188d6e127240b3af974d517db4a";
-    curl = "https://api.edamam.com/search?" + product + "app_id=$" + applicationID + "&app_key=$"
-    request.open("GET", "https://api.edamam.com/search?q=chicken&", true);
-        // request.setRequestHeader("x-api-key", "10ba75-7bf7d1-759a4a-e837bf-7978cc");
-        request.send();
+
+    var applicationID = "8fb9ce35";
+    var applicationKey = "733ad07ac699fca7d58c7abcc02bfb0b";
+    curl = "https://api.edamam.com/search?q=" + product + "&app_id=" + applicationID + "&app_key=" + applicationKey
+    request.open("GET", curl, true);
+    request.send();
 
 }
-// curl "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"
 
-
-        // xhttp.onreadystatechange = function () {
-        //     if (this.readyState == 4 && this.status == 200) {
-        //         toDos = JSON.parse(this.responseText);
-        //         for (var i = 0; i < toDos.length; i++) {
-        //             populate(toDos[i], i)
-        //         }
-
-            // }
-        // };
-
-        // xhttp.open("GET", "https://cse204.work/todos", true);
-        // xhttp.setRequestHeader("x-api-key", "10ba75-7bf7d1-759a4a-e837bf-7978cc");
-        // xhttp.send();
 
 </script>
 

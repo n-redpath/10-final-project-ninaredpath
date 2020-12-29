@@ -1,28 +1,56 @@
+body{
+    background-color: #faf8f5;
+}
+
+hr{
+    color:  #218c74;
+    background-color:  #218c74;
+
+}
 .container{
     padding: 0px;
     margin: 0px;
     width: 100%;
 }
 
+li{
+    list-style-type: none;
+    padding-top: 10px;
 
+}
 
 /* Header style */
 .header{
-    height: 130px;
+    height: 180px;
     width: 100%;
     color: white;
-    border-bottom: 1px solid black;
     display: inline-block;
-    position: relative;
+    position: fixed;
     align-content: center;
     text-align: center;
+    background-color: #faf8f5;
+
+    background: linear-gradient( #faf8f5 38%,rgba(255, 255, 255, 0));
+    z-index: 4;
+
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+
 }
 
 .header a{
-margin-top: 50px;
-padding-top: 40px;
-    margin-right: 8%;
+margin-right: 8%;
+text-decoration: none;
+color: #2f3640;
+font-size: 20px;
 }
+
+.header a:hover{
+    transition-duration: .5s;
+    opacity: .6;
+    text-decoration: none;
+    color: #218c74;
+}
+
 
 .header a img{
     float: left;
@@ -56,6 +84,7 @@ padding-top: 40px;
     text-align: center;
     padding-right: 120px;
     padding-left: 120px;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 
@@ -72,6 +101,12 @@ padding-top: 40px;
     padding-top: 25px;
     align-content: center;
     text-align: center;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+.bio{
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .colPics{
@@ -86,8 +121,7 @@ padding-top: 40px;
 .owners{
     width: 100%;
     height: 500px;
-    object-fit: cover;
-    
+    object-fit: cover;    
 }
 #worker{
     width: 105%;
@@ -136,7 +170,7 @@ padding-top: 40px;
     object-fit: cover;
     object-position: 0% 45%;
     height: 250px;
-    width: 100%;
+    width: 105%;
 }
 
 /* FILM LOCATION STYLE */
@@ -147,4 +181,77 @@ padding-top: 40px;
     margin: 0px;
     padding: 0px;
     width: 50%;
+}
+
+
+/* FOOTER */
+
+.footer{
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    height: 500px;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+i{
+    color: #218c74;
+    padding-top: 25px;
+    margin: 15px;
+}
+
+#email{
+    width: 400px;
+    margin-left: 25px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.771);
+    border-radius: 5px;
+}
+
+#subject{
+    width: 400px;
+    margin-left: 5px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.771);
+    border-radius: 5px;
+}
+
+#message{
+    width: 400px;
+    margin-top: 10px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.771);
+    border-radius: 5px;
+
+}
+
+#submit{
+    margin-top: 10px;
+    width: 120px;
+    border-radius: 5px;
+    margin-left: 80px;
+}
+
+#submit:active{
+    color: #ffbb00; 
+}
+iframe{
+    padding-left: 65px;
+    padding-top: 45px;
+    width: 80%;
+}
+
+
+/* RECIPE STUFF */
+#recipePic{
+    display: none;
+}
+
+#recipe{
+    align-items: center;
+    text-align: center;
+}
+
+#link{
+    display: none;
 }
