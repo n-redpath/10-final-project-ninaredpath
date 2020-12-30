@@ -6,6 +6,8 @@
     <title>Products</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0d30c02dfc.js" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
@@ -32,13 +34,21 @@
     <div>
         <!-- maple syrup, beef, honey -->
         <div class="row">
-            <div class="col odd">
-                <img class="product-image" src="photos/syrup.jpg" alt="syrup">
+            <div class="col odd" id= "overlay1"> 
+                <div class = "overlay odd">
+                    Wild Harvest Maple Syrup
+                    <br>
+                     <i class="fab fa-canadian-maple-leaf fa-2x"></i></div>
+                <img class="product-image odd" src="photos/syrup.jpg" alt="syrup">
             </div>
             <div class="col even">
+                <div class = "overlay odd" id="overlay2">Organic Pears <br>
+                    <i class="fas fa-leaf fa-2x"></i></div>
                 <img class="product-image" src="photos/pear.jpg" alt="syrup">
             </div>
             <div class="col odd">
+                <div class = "overlay odd" id="overlay3">Raw Honey <br>
+                    <i class="fab fa-hive fa-2x"></i></div>
                 <img class ="product-image" src="photos/honey.png" alt="">
             </div>
         </div> 
@@ -46,13 +56,23 @@
         <!-- apples, pears, peaches -->
         <div class="row">
             <div class="col even">
+                <div class = "overlay odd" id="overlay4">Organic Apples <br>
+                    <i class="fas fa-apple-alt fa-2x"></i></div>
                 <img class= "product-image" src="photos/apples.png" alt="apples">
             </div>
-            <div class="col odd"> <img class="product-image" src="photos/beef.jpg" alt=""></div>
-            <div class="col even"><img class = "product-image" src="photos/peaches.jpg" alt="peaches"></div>
+            <div class="col odd"> 
+                <div class = "overlay odd" id="overlay5">Grass Fed Beef
+                    <br> <i class="fas fa-hamburger fa-2x"></i>
+                </div>
+                <img class="product-image" src="photos/beef.jpg" alt=""></div>
+            <div class="col even">
+                <div class = "overlay odd" id="overlay6">Organic Peaches <br>
+                    <i class="fab fa-pagelines fa-2x"></i></div>
+                <img class = "product-image" src="photos/peaches.jpg" alt="peaches"></div>
         </div>
     </div>
 
+    <!-- about the products -->
     <div class="about-us">
         <h4>Our Products</h4>
 
@@ -67,23 +87,18 @@
 
         <p>Where will you send yours?</p>
         <br>
-    </div>
+        <i class="fas fa-flask fa-3x"></i>
 
-       <!-- API GAME BANNER -->
-    <div class="container">
-        <div class="row">
-            <div class="col" id="pic-2">
-                <br><br><br>
-            </div>
-        </div>
-        <br>
     </div>
+<!-- INERACTIVE API FEATURE -->
+
 <!-- the following text is my own words -->
     <div class="about-us">
         <h4>Find a recipe!</h4>
         <p>Can't decide what to make with one of our products? Use our recipe finder below!</p>
         <br>
         <p>Pick a product:</p>
+
         <!-- the following is from bootstrap -->
         <div class="btn-group">
             <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="drop">
@@ -98,16 +113,18 @@
                 <a class="dropdown-item" id="peaches">Peaches</a>
             </div>
           </div>
+
+
+
           <br><br>
           <h4 id = "product-update">Product Chosen: </h4>
           <br>
     </div>
 
-
+<!-- Div to update with API results -->
     <div id="recipe">
-        <hr>
         <h5 id="title"></h5>
-        <img src="" alt="picture" id="recipePic">
+        <img src="photos/cow2.png" alt="picture" id="recipePic">
         <ul id="ingredients">
 
         </ul>
@@ -117,7 +134,32 @@
 
         <br><br><br><br><br><br>
         <hr>
-        <br>
+
+        <!-- Footer -->
+    <div class="row">
+        <div class="col">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.5684042848047!2d-73.07231419799737!3d43.55303785238053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e03d71e799391b%3A0x38b25cfa6f9ad840!2sNEW%20DAY%20FARM!5e0!3m2!1sen!2sus!4v1609211323529!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    <div class="col-sm footer">
+        <h3>follow us social media!</h3>
+        <a href=""><i class="fab fa-instagram fa-3x" aria-hidden="true"></i></a>
+        <a href=""><i class="fab fa-twitter fa-3x" aria-hidden="true"></i></a>
+        <a href=""><i class="fab fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+        <a href=""><i class="fab fa-youtube fa-3x" aria-hidden="true"></i></a>
+
+        <h5>Contact us with any questions:</h5>
+          <label for="email">Email</label>
+         <input type="text" id="email" name="email"><br>
+         <label for="subject">Subject</label>
+         <input type="text" name="subject" id="subject"><br>
+         <label for="message">Message</label>
+         <input type="text" name="message" id="message"> <br>
+         <input type="submit" name="submit" id="submit">
+
+      </div>
+    </div>
+    <br><br><br><br>
+
     </div>
 
 
@@ -137,6 +179,11 @@ document.getElementById("pears").addEventListener("click", function () {changePr
 document.getElementById("peaches").addEventListener("click", function () {changeProduct("peaches")}, false) 
 
 
+document.getElementById("overlay1").addEventListener("mouseover", fade, false); 
+
+function fade(){
+    document.getElementById("overlay").style.display = "inline"
+}
 
 
 function changeProduct(product){

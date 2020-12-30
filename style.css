@@ -82,15 +82,15 @@ font-size: 20px;
     padding-top: 25px;
     align-content: center;
     text-align: center;
-    padding-right: 120px;
-    padding-left: 120px;
+    padding-right: 200px;
+    padding-left: 200px;
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 
 /* ABOUT THE OWNERS STYLE */
 
-#pic-1{
+.pic-1{
     margin: 0px;
     padding: 0px;
     background-color: cyan;
@@ -105,8 +105,8 @@ font-size: 20px;
 }
 
 .bio{
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 90px;
+    padding-left: 90px;
 }
 
 .colPics{
@@ -166,7 +166,7 @@ font-size: 20px;
 
 
 /* RANGER DESCRIPTION STYLE  */
-#sky{
+.sky{
     object-fit: cover;
     object-position: 0% 45%;
     height: 250px;
@@ -190,38 +190,49 @@ font-size: 20px;
     align-items: center;
     text-align: center;
     padding-top: 40px;
+    padding-right: 60px;
     height: 500px;
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 i{
     color: #218c74;
-    padding-top: 25px;
+    padding-top: 14px;
     margin: 15px;
 }
 
 #email{
-    width: 400px;
-    margin-left: 25px;
+    width: 350px;
+    margin-left: 19px;
     margin-top: 10px;
     background-color: rgba(255, 255, 255, 0.771);
     border-radius: 5px;
+    border: 1px solid #218c74;
 }
 
 #subject{
-    width: 400px;
-    margin-left: 5px;
+    width: 350px;
     margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.771);
+    background-color: rgba(255, 255, 255, 0.651);
     border-radius: 5px;
-}
+    margin-left: 5px;
+    border: 1px solid #218c74;
 
+}
+iframe{
+    padding-left: 85px;
+    padding-top: 45px;
+    width: 80%;
+    border: 2px solid #218c74;
+
+}
 #message{
-    width: 400px;
+    width: 350px;
     margin-top: 10px;
     height: 100px;
     background-color: rgba(255, 255, 255, 0.771);
     border-radius: 5px;
+    border: 1px solid #218c74;
 
 }
 
@@ -229,29 +240,66 @@ i{
     margin-top: 10px;
     width: 120px;
     border-radius: 5px;
-    margin-left: 80px;
+    margin-left: 60px;
+    border: 2px solid #218c74;
+
 }
 
 #submit:active{
-    color: #ffbb00; 
+    background-color: #218c74;
 }
-iframe{
-    padding-left: 65px;
-    padding-top: 45px;
-    width: 80%;
-}
+
+
 
 
 /* RECIPE STUFF */
 #recipePic{
     display: none;
+    width: 20%;
+    object-fit: cover;
+    margin-left: 40%;
 }
 
 #recipe{
     align-items: center;
     text-align: center;
+    align-content: center;
 }
 
 #link{
     display: none;
+}
+
+#drop{
+ background-color: #218c74;
+}
+
+
+/* OVERLAY STUFF (product page) */
+.overlay{
+  width: 34%;
+  color: white;
+  text-align: center;
+  align-content: center;
+  position: absolute;
+  padding-top: 70px;
+  background-color: rgba(44, 44, 44, 0.4);
+  display: inline; 
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.overlay:hover{
+    transition-duration: 1s;
+    opacity: .2;
+    z-index: 0;
+}
+
+
+.odd i{
+    color:#faf8f5;
+}
+
+.even i{
+    color: #faf8f5;
 }
